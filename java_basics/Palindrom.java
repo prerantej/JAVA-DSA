@@ -1,7 +1,7 @@
 package java_basics;
 import java.util.Scanner;
 
-public class palindrom {
+public class Palindrom {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a string: ");

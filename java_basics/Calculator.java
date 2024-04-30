@@ -2,7 +2,7 @@ package java_basics;
 
 import java.util.Scanner;
 
-public class calculator {
+public class Calculator {
     public static void main(String[] args) {
         System.out.println("welcome to the Calculator");
         int res=0;
@@ -11,7 +11,7 @@ public class calculator {
             System.out.println("Enter the operator");
             char operator = sc.next().charAt(0);
 
-            if(operator == '+' || operator == '-' || operator == '*' || operator == '/'){
+            if (operator == '+' || operator == '-' || operator == '*' || operator == '/') {
                 System.out.println("enter the first number");
                 int a = sc.nextInt();
                 System.out.println("enter the second number");
