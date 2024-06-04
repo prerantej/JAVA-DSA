@@ -39,7 +39,7 @@ public class PostEvaluation {
     }
 
     public static void main(String[] args) {
-        String string = "5 6 2 + ∗ 12 4 / −";
+        String string = "562+∗24/−";
         System.out.println(postFixEvaluation(string));
     }
 }
