@@ -15,19 +15,19 @@ public class AVLTree {
         return Math.max(a, b);
     }
 
+    int updateheight(TreeNode node){
+        return node.height=max(height(node.left),height(node.right))+1;
+    }
 
     TreeNode rightRotate(TreeNode y) {
         TreeNode x = y.left;
         TreeNode T2 = x.right;
 
-
         x.right = y;
         y.left = T2;
 
-
-        y.height = max(height(y.left), height(y.right)) + 1;
-        x.height = max(height(x.left), height(x.right)) + 1;
-
+        updateheight(y);
+        updateheight(x);
 
         return x;
     }
@@ -37,13 +37,11 @@ public class AVLTree {
         TreeNode y = x.right;
         TreeNode T2 = y.left;
 
-
         y.left = x;
         x.right = T2;
 
-        x.height = max(height(x.left), height(x.right)) + 1;
-        y.height = max(height(y.left), height(y.right)) + 1;
-
+        updateheight(x);
+        updateheight(y);
 
         return y;
     }
@@ -67,7 +65,7 @@ public class AVLTree {
         else // Duplicate values not allowed
             return node;
 
-        node.height = 1 + max(height(node.left), height(node.right));
+        updateheight(node);
 
 
         int balance = getBalance(node);
@@ -119,7 +117,7 @@ public class AVLTree {
             tree.root = tree.insert(tree.root, value);
         }
 
-        System.out.println("Preorder traversal of constructed tree is: ");
+        System.out.println("Inorder traversal of constructed tree is: ");
         tree.inOrder(tree.root);
     }
 }

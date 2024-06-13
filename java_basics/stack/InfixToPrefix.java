@@ -62,8 +62,8 @@ public class InfixToPrefix {
         while(!st.isEmpty()){
             s.append(st.pop());
         }
-        s = s.reverse();
-        return s.toString();
+        return reversestr(s.toString());
+
     }
 
 

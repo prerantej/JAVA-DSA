@@ -30,7 +30,15 @@ public class PostEvaluationWithSpace {
                 float i2 = st.pop();
                 float result = i2 * i1;
                 st.push(result);
+
             }
+            else if (ch.equals("^")) {
+                float i1 = st.pop();
+                float i2 = st.pop();
+                float result = (float) Math.pow(i2,i1);
+                st.push(result);
+            }
+
             else {
                 float token = Float.parseFloat(ch);
                 st.push(token);
