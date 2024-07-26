@@ -32,6 +32,7 @@ class NextPermutation {
     }
 
     public void rev(int x, int y, int[] arr) {
+        int n=arr.length;
         int i = x;
         int j = y;
         while (i < j) {
