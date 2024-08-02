@@ -2,7 +2,7 @@ package java_basics.BinaryTree;
 
 import java.util.*;
 
-public class levelOrderTraversal {
+public class LevelOrderTraversal {
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> ans = new ArrayList<>();
 
@@ -42,7 +42,7 @@ public class levelOrderTraversal {
         root.left.right = new TreeNode(5);
         root.right.right = new TreeNode(7);
 
-        levelOrderTraversal solution = new levelOrderTraversal();
+        LevelOrderTraversal solution = new LevelOrderTraversal();
         List<List<Integer>> result = solution.levelOrder(root);
 
         // Print the result
