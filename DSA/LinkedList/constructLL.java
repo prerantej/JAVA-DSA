@@ -1,14 +1,16 @@
 package DSA.LinkedList;
 
+import DSA.LinkedList.constructLL;
+
 class constructLL {
-    static Node constructLL(int arr[]) {
+    static ListNode constructLL(int arr[]) {
         if (arr.length == 0) {
             return null;
         }
-        Node head = new Node(arr[0]);
-        Node temp = head;
+        ListNode head = new ListNode(arr[0]);
+        ListNode temp = head;
         for (int i = 1; i < arr.length; i++) {
-            temp.next = new Node(arr[i]);
+            temp.next = new ListNode(arr[i]);
             temp = temp.next;
         }
         return head;
@@ -19,12 +21,12 @@ class constructLL {
         int[] arr = {1, 2, 3, 4, 5};
 
         // Construct the linked list
-        Node head = constructLL(arr);
+        ListNode head = constructLL(arr);
 
         // Print the linked list
-        Node temp = head;
+        ListNode temp = head;
         while (temp != null) {
-            System.out.print(temp.data + " ");
+            System.out.print(temp.val + " ");
             temp = temp.next;
         }
     }
