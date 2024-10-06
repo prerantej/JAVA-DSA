@@ -1,5 +1,6 @@
 package DSA.Arrays.Medium;
 import java.util.Arrays;
+
 public class dividePlayers {
         public long dividePlayers(int[] skill) {
             // Step 1: Sort the skill array
